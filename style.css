@@ -27,8 +27,9 @@ p {
 
 .container {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 
@@ -247,5 +248,141 @@ p {
     font-size: 14px;
     line-height: 1.2;
     font-weight: 400;
+    color: #ffffff;
+}
+
+
+/* Team =============================*/
+
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 100px -15px 70px;
+}
+
+.team__employee {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team__employee_info {
+    max-width: 265px;
+}
+
+.team__employee_photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.team__employee_name {
+    font-family: Raleway;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #2d3033;
+    margin-bottom: 10px;
+}
+
+.team__employee_prof {
+    font-family: Raleway;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #e84545;
+    margin-bottom: 25px;
+}
+
+.team__employee_text {
+    font-family: Raleway;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #6c7279;
+    margin-bottom: 25px;
+}
+
+.team__employee_contact {
+    display: flex;
+}
+
+.team__employee_contact_item {
+    display: flex;
+    color: #c6cacc;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ecf0f1;
+    margin-right: 5px;
+    text-decoration: none;
+
+    transition: background-color 0.2s linear;
+}
+
+.team__employee_contact_item:hover {
+    background-color: #ae9e85;
+    color: #fff;
+}
+
+
+/* Reviews =============================*/
+
+
+.reviews {
+    background-color: #53354a;
+    overflow: hidden;
+}
+
+.review__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.review__photo {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+
+.review__image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.review__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 80px;
+}
+
+.review__text {
+    font-family: Cardo;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.review__author {
+    font-family: Raleway;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
     color: #ffffff;
 }
