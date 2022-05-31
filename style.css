@@ -134,6 +134,7 @@ p {
     line-height: 21px;
     font-weight: 600;
     text-transform: uppercase;
+    text-align: center;
     color: #ffffff;
     text-decoration: none;
 
@@ -148,6 +149,11 @@ p {
 .intro__button--red:hover {
     background-color: #ffffff;
     color: #e84545;
+}
+
+.intro__button--long {
+    min-width: 280px;
+    border: 1px solid #e84545;
 }
 
 
@@ -327,7 +333,7 @@ p {
 }
 
 .team__employee_contact_item:hover {
-    background-color: #ae9e85;
+    background-color: #e84545;
     color: #fff;
 }
 
@@ -384,5 +390,124 @@ p {
     line-height: 21px;
     font-weight: 700;
     text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* Download =============================*/
+
+.download__inner {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.download__title {
+    font-family: Raleway;
+    font-size: 28px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #2d3033;
+    margin-bottom: 15px;
+}
+
+.download__subtitle {
+    font-family: Raleway;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2d3033;
+    margin-bottom: 40px;
+}
+
+
+/* Footer =============================*/
+
+
+.footer {
+    background-color: #3a3e64;
+    padding: 70px 0;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__inner_item {
+    width: 33.33333%;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.footer__inner_item_title {
+    font-family: Raleway;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer__inner_item_text {
+    opacity: 0.5;
+    font-family: Raleway;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    font-style: normal;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__social_item {
+    display: flex;
+    color: #ffffff;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    margin-right: 5px;
+    text-decoration: none;
+
+    transition: background-color 0.2s linear;
+}
+
+.footer__social_item:hover {
+    background-color: #e84545;
+}
+
+
+/* Copyright =============================*/
+
+
+.copyright {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #313454;
+}
+
+.copyright__title,
+.copyright__subtitle {
+    padding-bottom: 5px;
+    font-family: Raleway;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #808080;
+}
+
+.copyright__subtitle a {
+    font-family: Webdings;
+    color: #e84545;
+}
+
+.copyright__subtitle c {
     color: #ffffff;
 }
