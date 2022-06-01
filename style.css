@@ -74,12 +74,89 @@ p {
     transition: opacity 0.2s linear;
 }
 
+.nav__toggle {
+    display: none;
+}
+
 .header__nav__item:first-child {
     margin-left: 0;
 }
 
 .header__nav__item:hover {
     opacity: 1;
+}
+
+
+/* Nav toggle */
+
+.nav__toggle {
+    width: 30px;
+    padding: 28px 0;
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 0;
+    color: transparent;
+    border: 0;
+    background: none;
+    display: none;
+}
+
+.nav__toggle:focus {
+    outline: 0;
+}
+
+.nav__toggle__item {
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    transition: background-color 0.2s linear;
+}
+
+.nav__toggle.active .nav__toggle__item {
+    background: none;
+}
+
+.nav__toggle__item::before,
+.nav__toggle__item::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.2s linear;
+}
+
+.nav__toggle__item::before {
+    top: 8px;
+}
+
+.nav__toggle__item::after {
+    bottom: 8px;
+}
+
+.nav__toggle.active .nav__toggle__item::before {
+    transform-origin: left top;
+    transform: rotate(-45deg) translateX(-5px);
+}
+
+.nav__toggle.active .nav__toggle__item::after{
+    transform-origin: left top;
+    transform: rotate(45deg) translateX(-2px);
 }
 
 
@@ -510,4 +587,181 @@ p {
 
 .copyright__subtitle c {
     color: #ffffff;
+}
+
+
+/* Media =============================*/
+
+@media (max-width: 1024px) {
+
+    /* Header Nav */
+    
+    .header__nav__item {
+        margin-left: 35px;
+    }
+    
+    /* Intro */
+
+    .intro__title {
+        font-size: 48px;
+    }
+
+    .intro__subtitle {
+        font-size: 18px;
+    }
+
+    /* Team */
+
+    .team__employee_text {
+        font-size: 12px;
+    }
+
+    /* Reviews */
+
+    .review__text {
+        font-size: 26px;
+    }
+
+    
+}
+
+@media (max-width: 770px) {
+
+    /* Header Nav */
+
+    .header__nav {
+        display: none;
+    }
+
+    .nav__toggle {
+        display: block;
+    }
+
+        /* Intro */
+
+    .intro {
+        height: auto;
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
+
+    .intro__title {
+        font-size: 36px;
+    }
+
+    .intro__subtitle {
+        font-size: 16px;
+    }
+
+    .benefit__item {
+        width: 50%;
+    }
+
+    .project__item {
+        width: 50%;
+    }
+
+    .team {
+        justify-content: space-evenly;
+    }
+
+    .team__employee {
+        width: 50%;
+        max-width: 270px;
+        padding: 0 20px;
+    }
+
+    .review__photo {
+        width: 100%;
+    }
+    .review__content {
+        width: 100%;
+        padding: 30px 50px;
+    }
+
+    .review__text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .intro {
+        height: auto;
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+
+    .intro__title {
+        font-size: 30px;
+    }
+
+    .intro__subtitle {
+        font-size: 14px;
+    }
+
+    .benefit {
+        margin: 40px 0;
+    }
+
+    .benefit__item {
+        width: 100%;
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+
+    .project__item {
+        width: 100%;
+    }
+
+    .team__employee {
+        width: 100%;
+        max-width: 310px;
+        padding: 0 20px;
+    }
+
+    .download__title {
+        font-size: 20px;
+    }
+
+    .footer__inner_item {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .review__text {
+        line-height: 28px;
+    }
+
+    .footer {
+        padding-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 360px) {
+  
+    .intro__title {
+        font-size: 24px;
+    }
+
+    .intro__subtitle {
+        font-size: 12px;
+    }
+
+    .review__content {
+        padding: 20px 20px;
+    }
+
+    .benefit__item {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .intro {
+        height: 568px;
+    }
+
 }
