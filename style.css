@@ -42,7 +42,19 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1000px;
+    z-index: 1000;
+}
+
+.header.fixed {
+    position: fixed;
+    height: auto;
+    background-color: #313454;
+    z-index: 3;
+}
+
+.header.fixed .header__inner {
+    border-bottom: 0;
+    padding: 20px 0;
 }
 
 .header__inner {
@@ -288,6 +300,7 @@ p {
 }
 
 .project__image {
+    min-width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -637,7 +650,7 @@ p {
         display: block;
     }
 
-        /* Intro */
+    /* Intro */
 
     .intro {
         height: auto;
@@ -653,13 +666,19 @@ p {
         font-size: 16px;
     }
 
+    /* Benefits */
+
     .benefit__item {
         width: 50%;
     }
 
+    /* Projects */
+
     .project__item {
         width: 50%;
     }
+
+    /* Team */
 
     .team {
         justify-content: space-evenly;
@@ -671,9 +690,18 @@ p {
         padding: 0 20px;
     }
 
+    /* Reviews */
+
     .review__photo {
         width: 100%;
     }
+
+    .review__image {
+        right: -15px;
+        min-width: 100%;
+    }
+
+
     .review__content {
         width: 100%;
         padding: 30px 50px;
@@ -685,6 +713,8 @@ p {
 }
 
 @media (max-width: 575px) {
+
+    /* Intro */
 
     .intro {
         height: auto;
@@ -700,6 +730,8 @@ p {
         font-size: 14px;
     }
 
+    /* Benefits */
+
     .benefit {
         margin: 40px 0;
     }
@@ -710,9 +742,13 @@ p {
         padding: 0 20px;
     }
 
+    /* Projects */
+
     .project__item {
         width: 100%;
     }
+
+    /* Team */
 
     .team__employee {
         width: 100%;
@@ -720,17 +756,23 @@ p {
         padding: 0 20px;
     }
 
+    /* Download */
+
     .download__title {
         font-size: 20px;
     }
 
-    .footer__inner_item {
-        width: 100%;
-        padding-bottom: 50px;
-    }
+    /* Reviews */
 
     .review__text {
         line-height: 28px;
+    }
+
+    /* Footer */
+
+    .footer__inner_item {
+        width: 100%;
+        padding-bottom: 50px;
     }
 
     .footer {
@@ -741,6 +783,8 @@ p {
 
 @media (max-width: 360px) {
   
+    /* Intro */
+
     .intro__title {
         font-size: 24px;
     }
@@ -749,9 +793,21 @@ p {
         font-size: 12px;
     }
 
+    /* Reviews */
+
     .review__content {
         padding: 20px 20px;
     }
+
+    .review__image {
+        right: -120px;
+    }
+
+    .review__author {
+        font-size: 10px;
+    }
+
+    /* Benefits */
 
     .benefit__item {
         padding: 0 10px;
@@ -760,8 +816,13 @@ p {
 
 @media (max-width: 320px) {
 
+    /* Intro */
+
     .intro {
         height: 568px;
     }
 
+    .intro__button--long {
+        min-width: 240px;
+    }
 }
