@@ -57,6 +57,10 @@ p {
     padding: 20px 0;
 }
 
+.header.fixed .nav__toggle {
+    padding: 16px 0;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -86,10 +90,6 @@ p {
     transition: opacity 0.2s linear;
 }
 
-.nav__toggle {
-    display: none;
-}
-
 .header__nav__item:first-child {
     margin-left: 0;
 }
@@ -97,7 +97,6 @@ p {
 .header__nav__item:hover {
     opacity: 1;
 }
-
 
 /* Nav toggle */
 
@@ -436,9 +435,20 @@ p {
     overflow: hidden;
 }
 
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
+
 .review__item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .review__photo {
@@ -481,6 +491,40 @@ p {
     font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 30px;
+    list-style: none;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    background: #fff;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+    
+}
+
+.slick-dots .slick-active button {
+    background-color: #808080;
 }
 
 /* Download =============================*/
@@ -638,16 +682,49 @@ p {
     
 }
 
+@media (max-width: 900px) {
+
+    .review__content {
+        padding: 30px 20px 30px 50px;
+    }
+
+    .review__text {
+        font-size: 20px;
+    }
+
+    .review__image {
+        right: -35px;
+    }
+}
+
+
 @media (max-width: 770px) {
 
     /* Header Nav */
 
     .header__nav {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: 100%;
+        right: 0;
+        background-color: rgba(20, 23, 49, 0.9);
+    }
+
+    .header__nav__item {
+        margin-left: 0;
+        padding: 15px 0;
+        font-size: 16px;
     }
 
     .nav__toggle {
         display: block;
+    }
+
+    .header__nav.show {
+        display: flex;
     }
 
     /* Intro */
@@ -709,6 +786,11 @@ p {
 
     .review__text {
         font-size: 20px;
+    }
+
+    .slick-dots {
+        width: 100%;
+        bottom: -20px;
     }
 }
 

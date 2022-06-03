@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -7,12 +7,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link
         href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/dff1303042.js" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <meta name="description" content="Website development studio" />
+
+    <meta name="keywords" content="создание сайтеов, верстка сайтов, веб студия" />
+
+    <meta name="google" content="notranslate" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/06 favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/06 favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/06 favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/06 favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/06 favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <title>ActiveBox</title>
 
 </head>
@@ -27,7 +44,7 @@
                 <div class="header__logo">
                     <img src="images/01_intro/Intro_logo.png" alt="AB_Logo">
                 </div>
-                <nav class="header__nav">
+                <nav class="header__nav" id="nav">
                     <a class="header__nav__item" href="#" data-scroll="#benefits">Features</a>
                     <a class="header__nav__item" href="#" data-scroll="#projects">Works</a>
                     <a class="header__nav__item" href="#" data-scroll="#team">Our Team</a>
@@ -35,7 +52,7 @@
                     <a class="header__nav__item" href="#" data-scroll="#download">Download</a>
                 </nav>
 
-                <button class="nav__toggle" id="nav_toggle" type="button">
+                <button class="nav__toggle" type="button" id="navToggle">
                     <span class="nav__toggle__item">Menu</span>
 
                 </button>
@@ -336,23 +353,69 @@
 
     <section class="reviews" id="reviews">
         <div class="container">
-            <div class="review__item">
-                <div class="review__photo">
-                    <img class="review__image" src="images/05_reviews/review_1.png" alt="Review_photo">
-                </div>
-                <div class="review__content">
-                    <div class="review__text">
-                        <p>“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec
-                            sed odio dui. Aenean eu leo quam...”
-                        </p>
+
+            <div class="reviews__slider" id="reviewsSlider">
+                <div class="slick__item">
+                    <div class="review__item">
+                        <div class="review__photo">
+                            <img class="review__image" src="images/05_reviews/review_1.png" alt="Review_photo">
+                        </div>
+                        <div class="review__content">
+                            <div class="review__text">
+                                <p>“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec
+                                    sed odio dui. Aenean eu leo quam...”
+                                </p>
+                            </div>
+                            <div class="review__author">Susan Sims, Interaction Designer at XYZ</div>
+                            <div class="review__slider"></div>
+
+                        </div>
+
+
                     </div>
-                    <div class="review__author">Susan Sims, Interaction Designer at XYZ</div>
-                    <div class="review__slider"></div>
-
                 </div>
 
+                <div class="slick__item">
+                    <div class="review__item">
+                        <div class="review__photo">
+                            <img class="review__image" src="images/05_reviews/review_2.jpg" alt="Review_photo">
+                        </div>
+                        <div class="review__content">
+                            <div class="review__text">
+                                <p>"Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                                    Donec ullamcorper nulla non metus auctor fringilla."
+                                </p>
+                            </div>
+                            <div class="review__author">Carry Price, Senior Developer at XYZ</div>
+                            <div class="review__slider"></div>
 
-            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="slick__item">
+                    <div class="review__item">
+                        <div class="review__photo">
+                            <img class="review__image" src="images/05_reviews/review_3.jpg" alt="Review_photo">
+                        </div>
+                        <div class="review__content">
+                            <div class="review__text">
+                                <p>"Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
+                                    ornare vel eu leo. Donec ullamcorper nulla."
+                                </p>
+                            </div>
+                            <div class="review__author">Andrew Stakhanoff, Product Manager at XYZ</div>
+                            <div class="review__slider"></div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div> <!-- Reviews Slider -->
 
         </div> <!-- Container -->
 
@@ -435,6 +498,7 @@
 
     <!-- Java Script -->
 
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
 
 </body>
